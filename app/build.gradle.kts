@@ -40,6 +40,7 @@ android {
 
 dependencies {
     val lifecycle_version = "2.6.1"
+    val nav_version = "2.6.0" // 2.6.0. vom 7.6.2023, 2.7.1 hat target SDK 34
 
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -56,4 +57,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    // Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 }
