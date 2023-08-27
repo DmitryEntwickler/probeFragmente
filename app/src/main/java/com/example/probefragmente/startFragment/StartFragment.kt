@@ -10,16 +10,20 @@ import com.example.probefragmente.R
 import com.example.probefragmente.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
+    // Deklarieren
     lateinit var mBinding: FragmentStartBinding
     lateinit var mStartFragmentViewModel: StartFragmentViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Initialisieren
         mBinding = FragmentStartBinding.inflate(inflater, container, false)
-        mStartFragmentViewModel = ViewModelProvider(this)[StartFragmentViewModel::class.java]
-        mBinding.startFragmentViewModel = mStartFragmentViewModel
         mBinding.lifecycleOwner = this
+        mStartFragmentViewModel = ViewModelProvider(this)[StartFragmentViewModel::class.java]
+        // Verbinden
+        mBinding.startFragmentViewModel = mStartFragmentViewModel
+        // die richtige View zurückgeben
         return mBinding.root
     }
 }

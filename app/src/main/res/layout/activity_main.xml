@@ -7,9 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- android:name="com.example.probefragmente.startFragment.StartFragment" -->
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/startFragment"
-        android:name="com.example.probefragmente.startFragment.StartFragment"
+        android:name="com.example.probefragmente.secondFragment.SecondFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
