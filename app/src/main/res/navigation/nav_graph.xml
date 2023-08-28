@@ -13,10 +13,17 @@
         <action
             android:id="@+id/action_startFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_composeNavHostFragment"
+            app:destination="@id/composeNavHostFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.probefragmente.secondFragment.SecondFragment"
         android:label="SecondFragment"
         tools:layout="@layout/fragment_second"/>
+    <fragment
+        android:id="@+id/composeNavHostFragment"
+        android:name="com.example.probefragmente.composeNavHostFragment.ComposeNavHostFragment"
+        android:label="ComposeNavHostFragment" />
 </navigation>

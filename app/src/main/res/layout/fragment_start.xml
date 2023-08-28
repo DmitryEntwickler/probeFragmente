@@ -47,9 +47,16 @@
             android:id="@+id/button_navigate_to_second_fragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/button_navigate_to_composable_navHostFragment"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="navigate to Frament with Composable" />
+        <Button
+            android:id="@+id/button_navigate_to_composable_navHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="navigate" />
+            android:text="to ComposeNavHostFragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

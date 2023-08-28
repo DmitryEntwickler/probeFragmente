@@ -27,6 +27,9 @@ class StartFragment : Fragment() {
         mBinding.buttonNavigateToSecondFragment.setOnClickListener {
             mView.findNavController().navigate(R.id.action_startFragment_to_secondFragment)
         }
+        mBinding.buttonNavigateToComposableNavHostFragment.setOnClickListener {
+            mView.findNavController().navigate(R.id.action_startFragment_to_composeNavHostFragment)
+        }
 
         return mBinding.root
     }
