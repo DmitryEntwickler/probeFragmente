@@ -5,25 +5,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.example.probefragmente.R
 import com.example.probefragmente.databinding.FragmentStartBinding
 
 class StartFragment : Fragment() {
-    // Deklarieren
     lateinit var mBinding: FragmentStartBinding
-    lateinit var mStartFragmentViewModel: StartFragmentViewModel
+    val mStartFragmentViewModel: StartFragmentViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Initialisieren
         mBinding = FragmentStartBinding.inflate(inflater, container, false)
-        mBinding.lifecycleOwner = this
-        mStartFragmentViewModel = ViewModelProvider(this)[StartFragmentViewModel::class.java]
-        // Verbinden
+        mBinding.lifecycleOwner = viewLifecycleOwner
         mBinding.startFragmentViewModel = mStartFragmentViewModel
-        // die richtige View zurückgeben
+
+        // Navigation mit ButtonClick
+        val mView = mBinding.root
+        mBinding.buttonNavigateToSecondFragment.setOnClickListener {
+            mView.findNavController().navigate(R.id.action_startFragment_to_secondFragment)
+        }
+
         return mBinding.root
     }
 }

@@ -43,6 +43,13 @@
             app:layout_constraintStart_toStartOf="parent"
             android:text="change City"
             android:onClick="@{()->startFragmentViewModel.changeCity()}"/>
+        <Button
+            android:id="@+id/button_navigate_to_second_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="navigate" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
