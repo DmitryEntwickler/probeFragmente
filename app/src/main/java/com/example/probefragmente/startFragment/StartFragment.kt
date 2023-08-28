@@ -18,7 +18,8 @@ class StartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         mBinding = FragmentStartBinding.inflate(inflater, container, false)
-        mBinding.lifecycleOwner = viewLifecycleOwner
+        mBinding.lifecycleOwner = viewLifecycleOwner    // so richtig
+        //mBinding.lifecycleOwner = this                so nicht richtig
         mBinding.startFragmentViewModel = mStartFragmentViewModel
 
         // Navigation mit ButtonClick
@@ -30,3 +31,12 @@ class StartFragment : Fragment() {
         return mBinding.root
     }
 }
+
+// Navigation mit ButtonClick
+/*
+val mView = mBinding.root
+mBinding.buttonNavigateToSecondFragment.setOnClickListener {
+    mView.findNavController().navigate(R.id.action_startFragment_to_secondFragment)
+}
+
+ */
