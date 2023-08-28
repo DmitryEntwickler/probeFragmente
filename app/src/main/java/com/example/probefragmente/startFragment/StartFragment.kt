@@ -31,12 +31,3 @@ class StartFragment : Fragment() {
         return mBinding.root
     }
 }
-
-// Navigation mit ButtonClick
-/*
-val mView = mBinding.root
-mBinding.buttonNavigateToSecondFragment.setOnClickListener {
-    mView.findNavController().navigate(R.id.action_startFragment_to_secondFragment)
-}
-
- */

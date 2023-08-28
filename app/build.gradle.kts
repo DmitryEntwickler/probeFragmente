@@ -36,6 +36,12 @@ android {
     dataBinding {
         this.enable = true
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.1"
+    }
 }
 
 dependencies {
@@ -60,4 +66,12 @@ dependencies {
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    // Compose
+    val compose_version = "1.4.0"
+    implementation("androidx.lifecycle:lifecycle-runtime:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
+    implementation("org.jetbrains.compose.ui:ui:$compose_version")
+    implementation("org.jetbrains.compose.material:material:$compose_version")
 }
