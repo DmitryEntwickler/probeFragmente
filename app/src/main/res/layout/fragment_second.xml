@@ -28,7 +28,6 @@
             android:text="change City"
             android:onClick="@{}"/>
 
-            <!-- android:onClick="@{()->startFragmentViewModel.changeCity()}" -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

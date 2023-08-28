@@ -69,9 +69,10 @@ dependencies {
 
     // Compose
     val compose_version = "1.4.0"
-    implementation("androidx.lifecycle:lifecycle-runtime:2.3.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07")
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha10")
+    implementation("androidx.lifecycle:lifecycle-runtime:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    implementation("androidx.navigation:navigation-compose:2.6.0")
     implementation("org.jetbrains.compose.ui:ui:$compose_version")
     implementation("org.jetbrains.compose.material:material:$compose_version")
+    implementation("org.jetbrains.compose.foundation:foundation:$compose_version")
 }
